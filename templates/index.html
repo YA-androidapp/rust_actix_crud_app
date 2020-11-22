@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Items</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>text</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in entries %}<tr>
+                <td>{{ entry.id }}</td>
+                <td>{{ entry.text }}</td>
+                <td>
+                    <form action="/delete" method="post" class="form-inline">
+                        <input type="hidden" name="id" value="{{ entry.id }}"><button>del</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <form action="/add" method="post">
+                    <td></td>
+                    <td>
+                        <input name="text">
+                    </td>
+                    <td>
+                        <button>add</button>
+                    </td>
+                </form>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
