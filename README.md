@@ -4,6 +4,8 @@ actix-web による Web アプリケーション
 
 ---
 
+## トップページを表示
+
 ```sh
 # $ cargo new crudapp
 $ cargo init
@@ -16,3 +18,7 @@ $ cargo add actix-web actix-rt thiserror
 $ nano src/main.rs
 $ cargo run
 ```
+
+---
+
+Copyright (c) 2020 YA-androidapp(https://github.com/YA-androidapp) All rights reserved.
